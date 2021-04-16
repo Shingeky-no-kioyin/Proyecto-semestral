@@ -1,14 +1,26 @@
 body{
-    background-color: #D6EFFF;
+    background-color: #f1eded;
+}
+div.b {
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline; 
+}
+div.a{
+    text-align: right;
+}
+div.c{
+    text-align: center;
 }
 .btn-primary{
+    color: #8F8F8F;
     background-color: #003865;
     border-color: #003865;
 }
 
 .btn-primary:hover{
+    color:  #003865;
     background-color: #8F8F8F;
-    border-color: #8F8F8F;
+    border-color:  #003865;
 }
 .btn-secondary{
     background-color: #000000;
@@ -19,4 +31,36 @@ code{
     background-color: #000000;
 }
 
+.form-control{
+    background-color: #c7c2c2;
+}
+.btn-outline-success{
+    color:   #8F8F8F;
+    background-color: #003865;
+    border-color: #8F8F8F;
+}
 
+.btn-outline-success:hover{
+    color:   #003865;
+    background-color: #8F8F8F;
+    border-color: #003865;
+}
+.flex-column:hover{
+    color:   #003865;
+    background-color: #8F8F8F;    
+}
+
+#row1{
+    background-color: #003865;
+}
+
+#Caos_News{
+    background-color:#dfdbdb ;
+}
+
+#row2{
+    background-color: #dfdbdb;
+}
+#bb{
+    background-color: #DDD9D9;
+}
