@@ -4,4 +4,3 @@
 Integrantes:Danykza Ossandón y Erika Ruarte 
 
 Lider del equipo: Erika Ruarte
-Hola
