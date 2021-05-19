@@ -26,8 +26,7 @@ function getClima(posicion){
     var lon = posicion.coords.longitude
     console.log("Obteniendo clima coord: lat " + lat + " long " + lon)
 
-    var APIKey = '83203aa9f7e1fc2e7015240f64c45793'  //KEY de www.openweathermap.org (Registrarse para obtener una)
-
+    var APIKey = '83203aa9f7e1fc2e7015240f64c45793'
     var url = 'https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&appid='+APIKey+'&lang=es&units=metric'
 
     $.getJSON(
@@ -36,7 +35,6 @@ function getClima(posicion){
             console.log("Ciudad: " + data.name)
             console.log("Temperatura: " + data.main.temp.toFixed(0))
             console.log("Icon: " + data.weather[0].icon)
-            //Para más información respecto a los íconos: https://openweathermap.org/weather-conditions#How-to-get-icon-URL
             $("#ciudad").html(data.name)
             $("#temperatura").html(data.main.temp.toFixed(0)+'°c')
 
@@ -69,6 +67,7 @@ function getValorMoneda(codigo) {
         function (data) {
             $("#nombreMoneda").html('Valor de ' + data.Nombre)
             $("#valorMoneda").html('$'+data.Valor)
+
         }
     )
 }
@@ -82,14 +81,11 @@ $(document).ready(
 );
 
 $(document).ready(function () {
-
-    getValorMoneda('USD')
-
-
+   
     $.getJSON(
-        'https://api.gael.cloud/general/public/monedas/', //URL API
-        function (data) {  //QUE HACER CON LOS DATOS
-            //Cargar monedas al combobox
+        'https://api.gael.cloud/general/public/monedas/',
+        function (data) { 
+            
             $.each(data, function (i, item) {
                 $("#monedas").append(
                     '<option value="' + item.Codigo + '">' + item.Nombre + '</option>'
@@ -102,5 +98,10 @@ $(document).ready(function () {
         var codigo = $("#monedas").val()
         getValorMoneda(codigo)
     });
-    
+
+    $("#Limpiar").click(function () {
+        $("#nombreMoneda").hide()
+        $("#valorMoneda").hide()
+    });
+
 });
