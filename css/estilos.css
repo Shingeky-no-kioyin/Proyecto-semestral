@@ -76,8 +76,6 @@ code{
 
 
 
-
-
 * {
 	box-sizing: border-box;
 }
@@ -243,3 +241,8 @@ main {
 		width: 100%;
 	}
 }
+
+#rowFooter{
+    color: #0574cf;
+}
+
