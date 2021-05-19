@@ -1,129 +1,102 @@
 <!DOCTYPE html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="refresh" content="100" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactanos</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contáctanos</title>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/estilos.css">
-    <script src="js/jquery-3.6.0.js"></script>
-    <script src="js/script.js"></script>
+	<link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <div id="Caos_News" class="container-fluid">
-        <form action="#" id="formulario">
-            <div id="row1" class="row">
-                <div class="col-1">
-                  <ul class="nav">
-                    <img src="img/caos news.PNG" class="rounded-circle" alt="...">
-                  </ul>                          
-                </div>
-                <div id="row2" class="col-2">
-                    <h1>Caos News</h1>
-                    <h6>Noticias las 24 horas</h6>
-                </div>
-                <div id="row1" class="col-9"></div>
+    <div class="container-fluid">
+        <div id="row1" class="row">
+            <div class="col-1">
+              <ul class="nav">
+                <img src="img/caos news.PNG" class="rounded-circle" alt="...">
+              </ul>                          
             </div>
-            <br>
-            <br>
-            <div class="row">
-                <div class="col">
-                    <a class="nav-link active" href="usuario.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
-                        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/></svg> 
-                        volver
-                    </a>
-                </div>
+            <div id="row2" class="col-2">
+                <h1>Caos News</h1>
+                <h6>Noticias las 24 horas</h6>
             </div>
-            <div class="row">
-                <div class="col-5"></div>
-                <div class="col-3">
-                    <h1 aling="center">Contáctanos</h1>
-                </div>
-                <div class="col-4"></div>
+            <div id="row1" class="col-9"></div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col">
+                <a class="nav-link active" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/></svg> 
+                    volver
+                </a>
             </div>
-            <br>
-            <br>
-            <div class="row">
-                <div class="col-4"></div>
-                <div class="col-4">
+        </div>
+        <div class="row">
+            <div class="col-5"></div>
+            <div class="col-3">
+                <h1 aling="center">Contactanos</h1>
+            </div>
+            <div class="col-4"></div>
+        </div>
+        <br>
+        <br>
+        <div>
+            <main>
+                <form action="#" class="formulario" id="formulario">
                     <div class="formulario__grupo" id="grupo__nombre">
-                        <label for="nombre" class="formulario__label">Nombre y Apellido </label>
+                        <label for="nombre" class="formulario__label">Nombre y Apellido</label>
                         <div class="formulario__grupo-input">
                             <input type="text" class="formulario__input" name="nombre" id="nombre">
                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </div>
-                        <span class="error"></span>
+                        <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
                     </div>
-                </div>
-                <div class="col-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-4"></div>
-                <div class="col-4">
+                    <br>
+                    <br>
                     <div class="formulario__grupo" id="grupo__correo">
                         <label for="correo" class="formulario__label">Correo Electrónico</label>
                         <div class="formulario__grupo-input">
-                            <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+                            <input type="email" class="formulario__input" name="correo" id="correo" placeholder="ejemplo@gmail.com">
                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </div>
-                        <span class="error"></span>
+                        <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
                     </div>
-                </div>
-                <div class="col-4"></div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-4"></div>
-                <div class="col-4">
+                    <br>
+                    <br>
                     <div class="formulario__grupo" id="grupo__telefono">
                         <label for="telefono" class="formulario__label">Teléfono</label>
                         <div class="formulario__grupo-input">
                             <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="947062514">
                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </div>
-                        <span class="error3"></span>
+                        <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
                     </div>
-                </div>
-                <div class="col-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-4"></div>
-                <div class="col-4">
-                    <div >
-                        <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <br>
+                    <br>
+                    <div class="formulario__grupo" id="grupo__terminos">
+                        <label class="formulario__label">
+                            <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                            Acepto que Caos News me envie correos. 
+                        </label>
                     </div>
-                </div>
-                <div class="col-4"></div>
-            </div>
-            <br>
-            <br>
-            <br>
-            <div class="row">
-                <div class="col-7"></div>
-                <div class="col-2">
-                    <button type="button" class="btn btn-primary ">Enviar</button> 
-                </div>
-                <div class="col-3"></div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-4"></div>
-                <div class="col-4">
-                    <div class="b">
-                        <a href="Integracion.html" class="nav-link">Sé parte de nosotros</a>
+        
+                    <div class="formulario__mensaje" id="formulario__mensaje">
+                        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
                     </div>
-                </div>
-                <div class="col-4"></div>
-            </div>
-            <br>
-            <br>
-        </form>
+        
+                    <div class="formulario__grupo formulario__grupo-btn-enviar">
+                        <button type="submit" class="formulario__btn">Enviar</button>
+                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+                    </div>
+                </form>
+            </main>
+        </div>
     </div>
-    <script src="js/jquery-3.6.0.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.js"></script>
+	
+
+	<script src="js/script.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html>

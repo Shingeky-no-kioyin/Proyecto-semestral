@@ -126,13 +126,13 @@ main {
 	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
 }
 
-.error {
+.formulario__input-error {
 	font-size: 12px;
 	margin-bottom: 0;
 	display: none;
 }
 
-.error-activo {
+.formulario__input-error-activo {
 	display: block;
 }
 
