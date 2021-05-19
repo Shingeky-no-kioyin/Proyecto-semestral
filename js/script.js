@@ -34,14 +34,14 @@ const validarCampo = (expresion, input, campo) => { //buscará en expresiones, u
 		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
 		document.querySelector(`#grupo__${campo} i`).classList.add('fa-check-circle');
 		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-times-circle');
-		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
+		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
 		campos[campo] = true;
 	} else {
 		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto');
 		document.querySelector(`#grupo__${campo} i`).classList.add('fa-times-circle');
 		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-check-circle');
-		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
+		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
 		campos[campo] = false;
 	}
 }
@@ -73,6 +73,10 @@ formulario.addEventListener('submit', (e) => { //aquí el botón validará el fo
 	}
 });
 //TERMINÓ LA VALIDACIÓN DE CONTÁCTANOS
+
+//INICIO VALIDACIÓN DE CREAR USUARIO
+
+//TERMINÓ LA VALIDACIÓN DE CREAR USUARIO
 
 
 //Fecha actual
@@ -149,8 +153,7 @@ function getValorMoneda(codigo) {
     )
 }
 
-$(document).ready(
-    function () {
+$(document).ready(function(){
         fechaActual()
         getCoordenadas()
     }
