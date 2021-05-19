@@ -11,43 +11,71 @@
     <script src="js/script.js"></script>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <div id="row1" class="row">         
-            <div class="col"></div>
+          <div class="col">
+            <ul class="nav justify-content-end">
+              <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg> Nombre usuario</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="PaginalPrincipal.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg > Cerrar Sesion</a>
+                    </i>
+                  </li>
+              </ul>
+            </ul>
+          </div>
         </div>
-        <div id="row2" class="row"> 
-            <h1> </h1>          
-        </div>
-        <div id="row1"class="row">
-            <h1> </h1>          
-        </div>    
+        
         <div id="Caos_News"class="row">
-            <div class="col-1">                      
-                <img src="img/caos news.PNG" class="rounded-circle" alt="...">                                      
-            </div>
-            <div class="col-11">
-                <h1>Caos News</h1>
-                  <h6>Noticias las 24 horas</h6>
-            </div>         
-        </div>  
-        <div id="row1"class="row">
-              <h1> </h1>          
-        </div> 
+          <div class="col-1"> 
+            <hr>                     
+            <img src="img/caos news.PNG" class="rounded-circle" alt="...">                                      
+          </div>
+          <div class="col">
+            <hr>
+            <h1>Caos News</h1>
+              <h6>Noticias las 24 horas</h6>
+          </div>
+          <div class="col">
+            <ul class="nav justify-content-end">
+              <div id="clima">
+                <div id="icoClima">
+                    <img id="imgClima" src="" alt="">
+                </div>
+                <div id="dataClima">
+                    <span id="ciudad"></span><br>
+                    <span id="fecha"></span><br>
+                    <span id="temperatura"></span>
+                </div>
+              </div>  
+            </ul>
+            <hr>            
+          </div>                       
+        </div>                       
+           
         <div class="row">
-            <div class="col-8">
-                <a class="nav-link active" href="usuario.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
-                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/></svg> 
-                    volver
-                </a>
+            <div class="col">
+                <a class="nav-link active" href="usuario.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                  </svg> volver</a>
             </div>
-            <div class="col-4">
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
-            </div>
-        </div>
+            <div class="col">
+                <ul class="nav justify-content-end">
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                  </ul>                    
+            </div>    
+        </div>        
+    
         <br>
         <br>
         <div class="row">
