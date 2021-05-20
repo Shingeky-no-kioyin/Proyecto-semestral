@@ -252,4 +252,28 @@ body{
 }
 .error{
     color:#F00;
+
+}
+#flip {
+	padding: 5px;
+	text-align: center;
+	background-color: #e5eecc;
+	border: solid 1px #c3c3c3;
+}
+  
+#panel {
+	padding: 50px;
+	display: none;
+  }
+
+#errorNom{
+	color: #e20606;
+}
+
+#errorEmail{
+	color: #e20606;
+}
+
+#ErrorMensaje{
+	color: #e20606;
 }

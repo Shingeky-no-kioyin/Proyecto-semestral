@@ -137,3 +137,87 @@ $(document).ready(function () {
     });
 
 });
+
+$(document).ready(function(){
+
+    //DESLIZAR FORMULARIO
+
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+
+
+    //VALIDACIÓN FORMULARIO PÁGINA PRIENCIPAL
+
+    //NOMBRE Y APELLIDO
+
+    $("#errorNom").hide()
+
+    $("#NombreApellido").blur(function() {
+        console.log("NombreApellido perdió el foco")
+
+      
+        if($("#NombreApellido").val().length < 9) {
+            $("#errorNom").html("Debe contener mínimo 10 caractres.")
+            $("#errorNom").fadeIn()}
+        else $("#errorNom").hide()    
+    });
+
+    $("NombreApellido").focus(function() {
+        console.log("NombreApellido ganó el foco")
+        $("errorNom").fadeOut()
+    });
+    
+    //CORREO ELECTRÓNICO
+
+    function isEmail(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+    }
+    
+    function validaEmail(){
+        if ($("#email").val().trim().length == 0){
+            mensajeError("ErrorEmail", "Ingrese su correo electrónico")
+            return false
+        } else {
+            if (!isEmail($("#email").val())){
+                mensajeError("ErrorEmail", "Correo electrónico no válido")
+                return false
+            } else {
+                noError("ErrorEmail")
+                return true
+            }
+        }
+    }
+    
+    
+    $("#contEmail").blur(function(){
+        exito= validaEmail()
+    });
+
+    //VALIDACION MENSAJE
+    $("#ErrorMensaje").hide()
+
+    $("#mensaje").blur(function() {
+        console.log("mensaje perdió el foco")
+
+      
+        if($("#mensaje").val().length < 5) {
+            $("#ErrorMensaje").html("Debe contener mínimo 5 caractres.")
+            $("#ErrorMensaje").fadeIn()}
+        else $("#ErrorMensaje").hide()    
+    });
+
+    $("#mensaje").focus(function() {
+        console.log("mensaje ganó el foco")
+        $("ErrorMensaje").fadeOut()
+    });
+
+    $("#restablecer").click(function () {
+        $("#NombreApellido").hide()
+        $("#email").hide()
+        $("#mensaje").hide()
+    });
+
+        
+});
