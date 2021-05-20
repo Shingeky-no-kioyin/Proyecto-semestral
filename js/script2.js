@@ -103,3 +103,11 @@ formulario.addEventListener('submit', (e) => { //aquí el botón validará el fo
 	}
 });
 //TERMINÓ LA VALIDACIÓN DE CONTÁCTANOS Y CREAR USUARIO
+$(document).ready(function() {
+    $("#eli").click(function () {
+		$("#nombre").html().drop
+		$("#password").html().drop
+		$("#password2").html().drop
+		$("#correo").html().drop
+	});
+});
