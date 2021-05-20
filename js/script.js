@@ -150,7 +150,6 @@ $(document).ready(function(){
     //VALIDACIÓN FORMULARIO PÁGINA PRIENCIPAL
 
     //NOMBRE Y APELLIDO
-
     $("#errorNom").hide()
 
     $("#NombreApellido").blur(function() {
@@ -167,7 +166,7 @@ $(document).ready(function(){
         console.log("NombreApellido ganó el foco")
         $("errorNom").fadeOut()
     });
-    
+
     //CORREO ELECTRÓNICO
 
     function isEmail(email) {
@@ -212,12 +211,12 @@ $(document).ready(function(){
         console.log("mensaje ganó el foco")
         $("ErrorMensaje").fadeOut()
     });
+    
 
     $("#restablecer").click(function () {
-        $("#NombreApellido").hide()
-        $("#email").hide()
-        $("#mensaje").hide()
+        $("#NombreApellido").html().drop
+        $("#email").html().drop
+        $("#mensaje").html().drop
     });
-
         
 });
