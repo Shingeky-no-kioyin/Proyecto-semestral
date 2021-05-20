@@ -1,22 +1,22 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="refresh" content="1" >
+    <meta http-equiv="refresh" content="100">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Usuario</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilos.css">
-    <script src="js/jquery-3.6.0.js"></script>
-    <script src="js/script.js"></script>
 </head>
+
 <body>
     <div id="Caos_News" class="container-fluid">
         <div id="row1" class="row">
             <div class="col-1">
-              <ul class="nav">
-                <img src="img/caos news.PNG" class="rounded-circle" alt="...">
-              </ul>                          
+                <ul class="nav">
+                    <img src="img/caos news.PNG" class="rounded-circle" alt="...">
+                </ul>
             </div>
             <div id="row2" class="col-2">
                 <h1>Caos News</h1>
@@ -29,12 +29,15 @@
         <div class="row">
             <div class="col-8">
                 <a class="nav-link active" href="PaginalPrincipal.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
-                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/></svg> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                    </svg>
                     volver
                 </a>
             </div>
-        </div> 
+        </div>
         <div class="row">
             <div class="col-5"></div>
             <div class="col-3">
@@ -44,63 +47,79 @@
         </div>
         <br>
         <br>
-        <div class="row">
-            <div class="col-4">
-                <form action="#" method="POST">
-                    <label for="exampleFormControlInput1" class="form-label">Nombre y Apellido:</label>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <form action="#" id="formulario" class="formulario">
+            <div class="row">
+                <div class="col-4">
+                    <div class="formulario__grupo" id="grupo__nombre">
+                        <label for="nombre" class="formulario__label">Nombre</label>
+                        <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="nombre" id="nombre">
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener
+                            numeros, letras y guion bajo.</p>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <div class="row">
-            <div class="col-4">
-                <form action="">
-                    <label for="exampleFormControlInput1" class="form-label">Contraseña:</label>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-4">
+                    <div class="formulario__grupo" id="grupo__password">
+                        <label for="password" class="formulario__label">Contraseña</label>
+                        <div class="formulario__grupo-input">
+                            <input type="password" class="formulario__input" name="password" id="password">
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
                     </div>
-                </form>
+                </div>
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <img src="img/usuario.png">
+                </div>
             </div>
-            <div class="col-4"></div>
-            <div class="col-4">
-                <img src="img/usuario.png">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <form action="">
-                    <label for="exampleFormControlInput1" class="form-label">Verificar Contraseña:</label>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-4">
+                    <div class="formulario__grupo" id="grupo__password2">
+                        <label for="password2" class="formulario__label">Repetir Contraseña</label>
+                        <div class="formulario__grupo-input">
+                            <input type="password" class="formulario__input" name="password2" id="password2">
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <div class="row">
-            <div class="col-4">
-                <form action="">
-                    <label for="exampleFormControlInput1" class="form-label">Correo electrónico:</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                </form>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-4">
+                    <div class="formulario__grupo" id="grupo__correo">
+                        <label for="correo" class="formulario__label">Correo Electrónico</label>
+                        <div class="formulario__grupo-input">
+                            <input type="email" class="formulario__input" name="correo" id="correo"
+                                placeholder="ejemplo@gmail.com">
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y
+                            guion bajo.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <div class="row">
-            <div class="col-5"></div>
-            <div class="col-7">
-                <button type="button" class="btn btn-primary ">Entrar</button>
+            <br>
+            <br>
+            <br>
+            <div class="formulario__grupo formulario__grupo-btn-enviar">
+                <button type="submit" class="formulario__btn">Enviar</button>
+                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
             </div>
-        </div>
+        </form>
         <br>
         <br>
         <br>
@@ -112,8 +131,8 @@
             </div>
         </div>
     </div>
-    <script src="js/jquery-3.6.0.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="js/script2.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
