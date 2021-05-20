@@ -1,11 +1,11 @@
 //VALIDANDO INICIO DE SESION 
 
-$(document).ready(function(){
+$(document).ready(function () {
     $("#error1").hide()
 
-    $("#txt1").blur(function(){
+    $("#txt1").blur(function () {
         console.log("txt1 perdió el foco")
-        if($("#txt1").val().length<4){
+        if ($("#txt1").val().length < 4) {
             $("#error1").html("Recuerda que el nombre de usuario debe tener como minimo 4 caracteres")
             $("#error1").fadeIn()
         } else {
@@ -13,16 +13,16 @@ $(document).ready(function(){
         }
     });
 
-    $("#txt1").focus(function(){
+    $("#txt1").focus(function () {
         console.log("txt1 ganó el foco")
         $("#error1").fadeOut()
     });
-    $("#form1").submit(function(){
+    $("#form1").submit(function () {
         console.log("submit")
 
         var pass = $("#txt2").val()
 
-        if(pass.length < 8){
+        if (pass.length < 8) {
             $("#error2").html("contraseña debe tener minimo 8 caracteres")
             event.preventDefault()
         }
@@ -54,24 +54,24 @@ function getCoordenadas() {
     }
 }
 
-function getClima(posicion){
+function getClima(posicion) {
     var lat = posicion.coords.latitude
     var lon = posicion.coords.longitude
     console.log("Obteniendo clima coord: lat " + lat + " long " + lon)
 
     var APIKey = '83203aa9f7e1fc2e7015240f64c45793'
-    var url = 'https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&appid='+APIKey+'&lang=es&units=metric'
+    var url = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=' + APIKey + '&lang=es&units=metric'
 
     $.getJSON(
         url,
-        function(data){
+        function (data) {
             console.log("Ciudad: " + data.name)
             console.log("Temperatura: " + data.main.temp.toFixed(0))
             console.log("Icon: " + data.weather[0].icon)
             $("#ciudad").html(data.name)
-            $("#temperatura").html(data.main.temp.toFixed(0)+'°c')
+            $("#temperatura").html(data.main.temp.toFixed(0) + '°c')
 
-            var img_url  = 'https://openweathermap.org/img/wn/'+ data.weather[0].icon+'@2x.png'
+            var img_url = 'https://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png'
 
             $('#imgClima').attr('src', img_url);
         }
@@ -99,25 +99,25 @@ function getValorMoneda(codigo) {
         url,
         function (data) {
             $("#nombreMoneda").html('Valor de ' + data.Nombre)
-            $("#valorMoneda").html('$'+data.Valor)
+            $("#valorMoneda").html('$' + data.Valor)
 
         }
     )
 }
 
-$(document).ready(function(){
-        fechaActual()
-        getCoordenadas()
-    }
-    
+$(document).ready(function () {
+    fechaActual()
+    getCoordenadas()
+}
+
 );
 
 $(document).ready(function () {
-   
+
     $.getJSON(
         'https://api.gael.cloud/general/public/monedas/',
-        function (data) { 
-            
+        function (data) {
+
             $.each(data, function (i, item) {
                 $("#monedas").append(
                     '<option value="' + item.Codigo + '">' + item.Nombre + '</option>'
@@ -138,11 +138,11 @@ $(document).ready(function () {
 
 });
 
-$(document).ready(function(){
+$(document).ready(function () {
 
     //DESLIZAR FORMULARIO
 
-    $("#flip").click(function(){
+    $("#flip").click(function () {
         $("#panel").slideToggle("slow");
     });
 
@@ -150,19 +150,21 @@ $(document).ready(function(){
     //VALIDACIÓN FORMULARIO PÁGINA PRIENCIPAL
 
     //NOMBRE Y APELLIDO
+
     $("#errorNom").hide()
 
-    $("#NombreApellido").blur(function() {
+    $("#NombreApellido").blur(function () {
         console.log("NombreApellido perdió el foco")
 
-      
-        if($("#NombreApellido").val().length < 9) {
+
+        if ($("#NombreApellido").val().length < 9) {
             $("#errorNom").html("Debe contener mínimo 10 caractres.")
-            $("#errorNom").fadeIn()}
-        else $("#errorNom").hide()    
+            $("#errorNom").fadeIn()
+        }
+        else $("#errorNom").hide()
     });
 
-    $("NombreApellido").focus(function() {
+    $("NombreApellido").focus(function () {
         console.log("NombreApellido ganó el foco")
         $("errorNom").fadeOut()
     });
@@ -173,13 +175,13 @@ $(document).ready(function(){
         var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         return regex.test(email);
     }
-    
-    function validaEmail(){
-        if ($("#email").val().trim().length == 0){
+
+    function validaEmail() {
+        if ($("#email").val().trim().length == 0) {
             mensajeError("ErrorEmail", "Ingrese su correo electrónico")
             return false
         } else {
-            if (!isEmail($("#email").val())){
+            if (!isEmail($("#email").val())) {
                 mensajeError("ErrorEmail", "Correo electrónico no válido")
                 return false
             } else {
@@ -188,35 +190,36 @@ $(document).ready(function(){
             }
         }
     }
-    
-    
-    $("#contEmail").blur(function(){
-        exito= validaEmail()
+
+
+    $("#contEmail").blur(function () {
+        exito = validaEmail()
     });
 
     //VALIDACION MENSAJE
     $("#ErrorMensaje").hide()
 
-    $("#mensaje").blur(function() {
+    $("#mensaje").blur(function () {
         console.log("mensaje perdió el foco")
 
-      
-        if($("#mensaje").val().length < 5) {
+
+        if ($("#mensaje").val().length < 5) {
             $("#ErrorMensaje").html("Debe contener mínimo 5 caractres.")
-            $("#ErrorMensaje").fadeIn()}
-        else $("#ErrorMensaje").hide()    
+            $("#ErrorMensaje").fadeIn()
+        }
+        else $("#ErrorMensaje").hide()
     });
 
-    $("#mensaje").focus(function() {
+    $("#mensaje").focus(function () {
         console.log("mensaje ganó el foco")
         $("ErrorMensaje").fadeOut()
     });
-    
 
     $("#restablecer").click(function () {
-        $("#NombreApellido").html().drop
-        $("#email").html().drop
-        $("#mensaje").html().drop
+        $("#NombreApellido").hide()
+        $("#email").hide()
+        $("#mensaje").hide()
     });
-        
+
+
 });
