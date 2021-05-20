@@ -1,3 +1,36 @@
+//VALIDANDO INICIO DE SESION 
+
+$(document).ready(function(){
+    $("#error1").hide()
+
+    $("#txt1").blur(function(){
+        console.log("txt1 perdió el foco")
+        if($("#txt1").val().length<4){
+            $("#error1").html("Recuerda que el nombre de usuario debe tener como minimo 4 caracteres")
+            $("#error1").fadeIn()
+        } else {
+            $("#error1")
+        }
+    });
+
+    $("#txt1").focus(function(){
+        console.log("txt1 ganó el foco")
+        $("#error1").fadeOut()
+    });
+    $("#form1").submit(function(){
+        console.log("submit")
+
+        var pass = $("#txt2").val()
+
+        if(pass.length < 8){
+            $("#error2").html("contraseña debe tener minimo 8 caracteres")
+            event.preventDefault()
+        }
+    })
+});
+
+//SE TERMINÓ LA VALIDACIÓN DE INICIO SESION
+
 //Fecha actual
 function fechaActual() {
     var dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];

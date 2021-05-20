@@ -6,7 +6,7 @@ const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	telefono: /^\d{8,14}$/, // 8 a 14 numeros.
-    password: /^.{4,12}$/ // 4 a 12 digitos.
+    password: /^.{8,12}$/ // 4 a 12 digitos.
 }
 
 const campos = {
